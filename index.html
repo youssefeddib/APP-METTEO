@@ -6,29 +6,125 @@
     <title>METTEO</title>
     <link href="bootstrap-4.0.0-dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        .bacground{
-            background: url(/images/bacground.jpg) no-repeat center;
+        body {
+            background: url('./bacground\ \(2\).jpg') no-repeat;
+            background-size: cover;
+            color: black;
+            font-family: Arial, sans-serif;
+            background-attachment: fixed;
+           
         }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+        }
+        .search-bar {
+            position: relative;
+            width: 250px;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 5px 40px 5px 10px;
+            border: none;
+            border-radius: 20px;
+            background-color: #333;
+            color: white;
+        }
+        .search-bar input::placeholder {
+            color: #aaa;
+        }
+        .search-bar button {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: white;
+        }
+        .search-bar button:hover {
+            color: #66ccff;
+        }
+        .time-location .detloc p{
+            font-size: 30px;
+        }
+        .time-location h1  {
+            font-size: 50px;
+            margin-right: 110px;
+            padding: 40px;
+            
+        }
+        .time-location p {
+            font-size: 20px;
+            font-family:'Abril Fatface';
+        }
+        .col .forecast{
+            color: aliceblue;
+            background-color: #424141de;
+            justify-content: space-between;
+            height: 260px;
+            border-radius: 15px;
+            padding: 30px;
+        }
+        .col {
+            margin: 15px;
+            
+        }
+        .date p {
+            color: aliceblue;
+            font-size: 2rem;
+            margin-left: 1350px;
+         }
+         .weather-widget{
+            width: 80px;
+            height: 80px;
+            margin-bottom: 450px;
+            margin-right: 900px;
+            margin-top: -80px;
+            
+
+         }
+        
+     
     </style>
 </head>
 
-<body class="bacground">
-    <div class="container py-5">
-        <div class="weather-container text-center text-white">
-            <h3 class="mb-3">MÉTÉO</h3>
-            <div class="dark-mode-toggle mb-4">
-                <span>Mode sombre</span>
-                <div class="dark-mode-bar"></div>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <h2><strong>MÉTÉO</strong></h2>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder=""> 
+            <button type="button">
+                <i class="bi bi-search"></i>
+            </button>
+        </div>
+        <div class="time-location">
+            <h1>16:68 PM</h1>
+            <p>Maroc</p>
+            <p>Beni Mellal</p>
+            <strong><p>Lundi</p></strong> 
+            <strong><p>20 Janvier</p></strong></div>
+            
+        </div>
+        
+    </header>
+
+
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="weather-widget">
+            <div class="weather-icon">
+                <img src="./ICONES.png" alt="Weather Icon">
             </div>
-            <div class="mb-4">
-                <img src="images/Temperature.png" alt="Météo actuelle" style="width: 100px;"> 
-                <h1 class="display-4 fw-bold">25°C</h1>
-                <p class="mb-1">Lundi, 20 Janvier</p>
+            <div class="temp">
+                <strong><h1>25°</h1></strong>
+                <strong><h2>Aujourd'hui</h2></strong>
             </div>
-            <div class="text-end mb-4">
-                <p class="mb-0 fs-5">16:68</p>
-                <p class="mb-0">MAROC<br>Beni Mellal</p>
-            </div>
+            
         </div>
     </div>
 
@@ -38,7 +134,7 @@
             <div class="forecast">
                 <p class="fw-bold mb-1">MARDI</p>
                 <P class="mb-1">21/1</P>
-                <img src="#" alt="Ensoleillé">
+                <img src="./images/icones/drizzle 1.png" alt="Ensoleillé">
                 <p class="mt-2">22°C</p>
             </div>
         </div>
@@ -46,7 +142,7 @@
             <div class="forecast">
                 <p class="fw-bold mb-1">MERCREDI</p>
                 <p class="mb-1">22/1</p>
-                <img src="#" alt="Ensoleillé">
+                <img src="./images/icones/clear 2.png" alt="Ensoleillé">
                 <p class="mt-2">22°C</p>
             </div>
         </div>
@@ -54,7 +150,7 @@
             <div class="forecast">
                 <p class="fw-bold md-1">JEUDI</p>
                 <p class="mb-1">23/1</p>
-                <img src="#" alt="Nuageux">
+                <img src="./images/icones/clouds 1.png" alt="Nuageux">
                 <p class="mt-2">25°C</p>
             </div> 
         </div>
@@ -62,7 +158,7 @@
             <div class="forecast">
                 <p class="fw-bold md-1">VENDREDI</p>
                 <p class="md-1">24/1</p>
-                <img src="#" alt="Nuageux">
+                <img src="./images/icones/mist 1.png" alt="Nuageux">
                 <p class="mt-2">22°C</p>
             </div>
         </div>
@@ -70,7 +166,7 @@
             <div class="forecast">
                 <p class="fw-bold md-1">SAMEDI</p>
                 <p class="md-1">25/1</p>
-                <img src="#" alt="Nuageux">
+                <img src="./images/icones/rain 1.png" alt="Nuageux">
                 <p class="mt-2">22°C</p>    
             </div>
         </div>
