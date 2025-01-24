@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>METTEO</title>
     <link href="bootstrap-4.0.0-dist/css/bootstrap.min.css" rel="stylesheet">
+    
+
+
     <style>
         body {
             background: url('./bacground\ \(2\).jpg') no-repeat;
@@ -20,6 +23,12 @@
             justify-content: space-between;
             
         }
+        .header .logo , .search-bar{
+          margin-top: -170px;
+          margin-left: 50px;
+            
+        }
+
         .search-bar {
             position: relative;
             width: 250px;
@@ -47,18 +56,18 @@
         .search-bar button:hover {
             color: #66ccff;
         }
-        .time-location .detloc p{
-            font-size: 30px;
-        }
+    
+
         .time-location h1  {
             font-size: 50px;
-            margin-right: 110px;
+            margin-right: 100px;
             padding: 40px;
+            font-family: 'Abril Fatface';
             
         }
-        .time-location p {
+        .time-location P {
             font-size: 20px;
-            font-family:'Abril Fatface';
+            margin-left: 50px;
         }
         .col .forecast{
             color: aliceblue;
@@ -81,35 +90,55 @@
             width: 80px;
             height: 80px;
             margin-bottom: 450px;
-            margin-right: 900px;
-            margin-top: -80px;
-            
-
+            margin-right: 800px;
+            margin-top: -150px;
+            font-family:  'Abril Fatface';
          }
-        
+        @media screen and (max-width:768px){
+        .weather-widget{
+            margin-left:   350px;
+         }
+        .row {
+                justify-content:center;
+                align-items: center;
+                display: grid;
+        } 
+        .row .col{
+            width: 400px;
+        }
+        .back {
+            justify-content: center;
+         }
+        .time-location{
+            margin-left: 150px;  
+         }
+         .search-bar input{
+            width: 150px ;
+         }
+         body{
+            width: 740px;
+         }
+        }
      
     </style>
 </head>
 
-<body>
+<body class="back">
 
     <header class="header">
-        <div class="logo">
+        <div class="logo" style="font-family: Nosifer;">
             <h2><strong>MÉTÉO</strong></h2>
         </div>
         <div class="search-bar">
-            <input type="text" placeholder=""> 
+            <input type="text" placeholder="recherche..."> 
             <button type="button">
                 <i class="bi bi-search"></i>
             </button>
         </div>
         <div class="time-location">
             <h1>16:68 PM</h1>
-            <p>Maroc</p>
-            <p>Beni Mellal</p>
-            <strong><p>Lundi</p></strong> 
-            <strong><p>20 Janvier</p></strong></div>
-            
+            <p>Maroc <br> Beni Mellal</p>
+            <strong><p>Lundi <br> 20 Janvier</p></strong> 
         </div>
         
     </header>
