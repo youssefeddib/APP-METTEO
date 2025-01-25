@@ -1,5 +1,4 @@
-
-const apiKey = "07d05b7536c6cd0877e496a495b8ef12"; 
+const apiKey = "07d05b7536c6cd0877e496a495b8ef12";
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather";
 
 
@@ -22,7 +21,7 @@ async function fetchWeather(city) {
         }
         const weatherData = await response.json();
 
-        
+
         updateCurrentWeather(weatherData);
     } catch (error) {
         alert(error.message);
@@ -30,3 +29,13 @@ async function fetchWeather(city) {
 }
 
 
+function updateCurrentWeather(data) {
+    const { name, sys, main, weather, dt } = data;
+
+    locationDisplay.innerHTML = `${sys.country} <br> ${name}`;
+    tempDisplay.innerHTML = `${Math.round(main.temp)}°`;
+    const iconUrl = `http://openweathermap.org/img/wn/${weather[0].icon}@2x.png`;
+    weatherIcon.src = iconUrl;
+    const currentDate = new Date(dt * 1000);
+    updateDateTime(currentDate);
+}
