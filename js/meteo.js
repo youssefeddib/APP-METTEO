@@ -39,3 +39,17 @@ function updateCurrentWeather(data) {
     const currentDate = new Date(dt * 1000);
     updateDateTime(currentDate);
 }
+
+function updateDateTime(date) {
+    const days = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
+    const months = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
+
+    const day = days[date.getDay()];
+    const month = months[date.getMonth()];
+    const currentDate = date.getDate();
+    const hours = String(date.getHours()).padStart(2, '0');
+    const minutes = String(date.getMinutes()).padStart(2, '0');
+
+    timeDisplay.innerHTML = `${hours}:${minutes} PM`;
+    dateDisplay.innerHTML = `${day} <br> ${currentDate} ${month}`;
+}
